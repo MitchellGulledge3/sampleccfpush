@@ -43,7 +43,7 @@
               { "name":"TenantId", "type":"string"},
               { "name":"TenantId", "type":"string"},
               { "name":"TenantId", "type":"string"}
-              }]}},
+              ]}},
 
               "destinations": {
             "logAnalytics": [
