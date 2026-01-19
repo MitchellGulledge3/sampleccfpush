@@ -1,0 +1,70 @@
+{
+    "name": "ObsidianCustomDCR",
+    "apiVersion": "2021-09-01-preview",
+    "type": "Microsoft.Insights/dataCollectionRules",
+    "location": "[parameters('workspace-location')]",
+    "properties": {
+        "streamDeclarations": {
+          "Custom-gigamontelemetryv2": {
+            "columns": [
+              { "name":"TenantId", "type":"string"},
+              { "name":"SourceSystem", "type":"string"},
+              { "name":"TenantId", "type":"string"},
+              { "name":"TenantId", "type":"string"},
+              { "name":"TenantId", "type":"string"},
+              { "name":"TenantId", "type":"string"},
+              { "name":"TenantId", "type":"string"},
+              { "name":"TenantId", "type":"string"},
+              { "name":"TenantId", "type":"string"},
+              { "name":"TenantId", "type":"string"},
+              { "name":"TenantId", "type":"string"},
+              { "name":"TenantId", "type":"string"},
+              { "name":"TenantId", "type":"string"},
+              { "name":"TenantId", "type":"string"},
+              { "name":"TenantId", "type":"string"},
+              { "name":"TenantId", "type":"string"},
+              { "name":"TenantId", "type":"string"},
+              { "name":"TenantId", "type":"string"},
+              { "name":"TenantId", "type":"string"},
+              { "name":"TenantId", "type":"string"},
+              { "name":"TenantId", "type":"string"},
+              { "name":"TenantId", "type":"string"},
+              { "name":"TenantId", "type":"string"},
+              { "name":"TenantId", "type":"string"},
+              { "name":"TenantId", "type":"string"},
+              { "name":"TenantId", "type":"string"},
+              { "name":"TenantId", "type":"string"},
+              { "name":"TenantId", "type":"string"},
+              { "name":"TenantId", "type":"string"},
+              { "name":"TenantId", "type":"string"},
+              { "name":"TenantId", "type":"string"},
+              { "name":"TenantId", "type":"string"},
+              { "name":"TenantId", "type":"string"},
+              { "name":"TenantId", "type":"string"},
+              { "name":"TenantId", "type":"string"},
+              { "name":"TenantId", "type":"string"}
+              }]}},
+
+              "destinations": {
+            "logAnalytics": [
+                {
+                    "workspaceResourceId": "[variables('workspaceResourceId')]",
+                    "name": "clv2ws1"
+                }
+            ]
+        },
+
+      "dataFlows": [
+            {
+                "streams": [
+                    "Custom-gigamontelemetryv2"
+                ],
+                "destinations": [
+                    "clv2ws1"
+                ],
+                "transformKql": "source",
+                "outputStream": "Custom-gigamontelemetryv2_CL"
+            }],
+      "dataCollectionEndpointId": "{{dataCollectionEndpointsId}}"
+    }
+}
